@@ -1,7 +1,7 @@
 const q = require('daskeyboard-applet');
 
 const logger = q.logger;
-const queryUrlBase = '	https://slack.com/api/';
+const queryUrlBase = 'https://slack.com/api/';
 
 function getTimestamp() {
   var d = new Date(Date.now()),
