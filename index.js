@@ -28,7 +28,7 @@ class Slack extends q.DesktopApp {
 
   async getMessages() {
     // const query = "search.messages?query=pickleface&sort=timestamp&pretty=1";
-    const query = "search.messages?sort=timestamp";
+    const query = "search.messages?query=pickleface&sort=timestamp";
 
     const proxyRequest = new q.Oauth2ProxyRequest({
       apiKey: this.authorization.apiKey,
