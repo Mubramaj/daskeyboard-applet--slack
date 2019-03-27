@@ -27,7 +27,9 @@ class Slack extends q.DesktopApp {
   }
 
   async getMessages() {
-    const query = "search.messages?query=pickleface&sort=timestamp&pretty=1";
+    // const query = "search.messages?query=pickleface&sort=timestamp&pretty=1";
+    const query = "search.messages?sort=timestamp";
+
     const proxyRequest = new q.Oauth2ProxyRequest({
       apiKey: this.authorization.apiKey,
       uri: queryUrlBase + query
@@ -41,7 +43,7 @@ class Slack extends q.DesktopApp {
     console.log("Running.");
     return this.getMessages().then(newMessages => {
       this.timestamp = getTimestamp();
-      logger.info("This is the response",newMessages);
+      logger.info("This is the response", newMessages);
       if (newMessages && newMessages.length > 0) {
 
         if (newMessages.length == 1) {
