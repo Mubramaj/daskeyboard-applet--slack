@@ -18,6 +18,9 @@ function getTimestamp() {
 class Slack extends q.DesktopApp {
   constructor() {
     super();
+    // run every min
+    this.pollingInterval = 1 * 60 * 1000;
+
     this.timestamp = getTimestamp();
     // For checking plural or singular
     this.notification = "";
