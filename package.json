@@ -39,7 +39,35 @@
     },
     "authorization": {
       "type": "oauth2"
-    }
+    },
+    "questions": [
+      {
+        "key": "channels",
+        "label": "Add channel",
+        "help": "Notify each time a new message from the channels listed bellow arrives",
+        "required": true,
+        "placeholder": "general",
+        "order": 1,
+        "controlType": "textbox",
+        "isArray": true
+      },
+      {
+        "key": "color",
+        "label": "Select a color",
+        "required": true,
+        "order": 2,
+        "controlType": "color",
+        "value": "#ff0000"
+      },
+      {
+        "key": "effect",
+        "label": "Select a notification effect",
+        "required": true,
+        "order": 3,
+        "controlType": "effect",
+        "value": "BLINK"
+      }
+    ]
   },
   "devDependencies": {
     "mocha": "^5.2.0"
