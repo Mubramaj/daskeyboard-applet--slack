@@ -26,7 +26,20 @@ class Slack extends q.DesktopApp {
     this.notification = "";
   }
 
+  async applyConfig() {
+
+    logger.info("Initialisation.")
+
+    // Get conversations
+    // https://api.slack.com/methods/conversations.list
+
+  }
+
   async getMessages() {
+    // Get messages from the conversations (check email)
+    // https://api.slack.com/methods/conversations.history
+
+    // Need to update. Was for testing.
     // const query = "search.messages?query=pickleface&sort=timestamp&pretty=1";
     const query = "search.messages?query=pickleface&sort=timestamp";
 
